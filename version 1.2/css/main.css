@@ -520,7 +520,6 @@ a:hover {
   opacity: 1;
 }
 
-/* Создать свою карту */
 [class*=gototech] {
   display: none !important;
 }
@@ -529,7 +528,6 @@ a:hover {
   filter: grayscale(1) sepia(10%);
 }
 
-/* Baloon */
 [class*=balloon__layout], [class*=balloon__content] {
   background-color: #242b33 !important;
   color: #fff !important;
