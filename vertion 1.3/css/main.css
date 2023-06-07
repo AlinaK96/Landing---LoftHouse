@@ -228,10 +228,9 @@ a:hover {
 .nav__list {
   display: flex;
   -moz-column-gap: 40px;
-       column-gap: 40px;
+        column-gap: 40px;
 }
 
-/* Nav Icon */
 .nav-icon-btn {
   --time: 0.1s;
   --width: 40px;
@@ -338,7 +337,7 @@ a:hover {
 .benefits__row {
   display: flex;
   -moz-column-gap: 70px;
-       column-gap: 70px;
+        column-gap: 70px;
 }
 
 
@@ -599,7 +598,6 @@ a:hover {
 }
 
 [class*=copyrights-pane] {
-  /* display: none !important; */
   opacity: 0;
   transition: opacity 0.2s ease-in;
 }
@@ -608,7 +606,6 @@ a:hover {
   opacity: 1;
 }
 
-/* Создать свою карту */
 [class*=gototech] {
   display: none !important;
 }
@@ -694,5 +691,5 @@ a:hover {
   display: flex;
   align-items: center;
   -moz-column-gap: 22px;
-       column-gap: 22px;
+      column-gap: 22px;
 }
