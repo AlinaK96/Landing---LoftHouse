@@ -1,25 +1,3 @@
-// scroll из header
-
-let links = document.querySelectorAll('.menu-item > a')
-for (let i = 0; i < links.length; i++){
-    links[i].onclick = function () {
-        document.getElementById(links[i].getAttribute("data-link")).scrollIntoView({behavior: 'smooth'})
-    }
-}
-
-// burger menu
-
-const navBtn = document.querySelector('.nav-icon-btn');
-const navIcon = document.querySelector('.nav-icon');
-const nav = document.querySelector('.header__top-row');
-
-navBtn.onclick = function () {
-    navIcon.classList.toggle('nav-icon--active');
-    nav.classList.toggle('header__top-row--mobile');
-    document.body.classList.toggle('no-scroll');
-}
-
-
 /* Yandex Map */
 ymaps.ready(init);
 function init(){

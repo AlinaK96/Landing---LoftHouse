@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LoftHouse</title>
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="shortcut icon" href="./img/ico.svg" type="image/x-icon">
     <link rel="stylesheet" href="./libs/youtubeLightbox/youtubeLightbox.css">
+    <title>LoftHouse</title>
+
 </head>
 <body>
     <header class="header none1">
@@ -21,11 +23,11 @@
                     <div class="header__nav">
                         <nav class="nav">
                             <ul class="nav__list">
-                                <li><a href="#!">О комплексе</a></li>
-                                <li><a href="#!">Район</a></li>
-                                <li><a href="#!">Каталог квартир</a></li>
-                                <li><a href="#!">Ипотека</a></li>
-                                <li><a href="#!">Контакты</a></li>
+                                <li class="menu-item"><a data-link="about">О комплексе</a></li>
+                                <li class="menu-item"><a data-link="district">Район</a></li>
+                                <li class="menu-item"><a data-link="catalog">Каталог квартир</a></li>
+                                <li class="menu-item"><a data-link="questions">Ипотека</a></li>
+                                <li class="menu-item"><a data-link="contacts">Контакты</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -53,32 +55,34 @@
             </div>
             <a href="tel:+78121234567" class="info info--tel">8 (812) 123-45-67</a>
         </div>
+
+        <button class="back-to-top none" title="Вернуться наверх"> &#9650;</button>
     </header>
 
     <main>
-        <section class="benefits none1">
+        <section class="benefits none1" id="district">
             <h2 class="visually-hidden">Преимущества ЖК</h2>
 
             <div class="container container--sm">
                 <div class="benefits__row">
 
                     <div class="benefits__item">
-                        <img src="./img/benefits/bench.svg" alt="" class="benefits__item-img">
+                        <img src="./img/benefits/bench.svg" alt="benefits" class="benefits__item-img">
                         <p class="benefits__item-text">Рядом исторические парки&nbsp;и&nbsp;скверы</p>
                     </div>
 
                     <div class="benefits__item">
-                        <img src="./img/benefits/building.svg" alt="" class="benefits__item-img">
+                        <img src="./img/benefits/building.svg" alt="benefits" class="benefits__item-img">
                         <p class="benefits__item-text">Полностью обустроенный</p>
                     </div>
 
                     <div class="benefits__item">
-                        <img src="./img/benefits/fountain.svg" alt="" class="benefits__item-img">
+                        <img src="./img/benefits/fountain.svg" alt="benefits" class="benefits__item-img">
                         <p class="benefits__item-text">10 фонтанов на территории</p>
                     </div>
 
                     <div class="benefits__item">
-                        <img src="./img/benefits/bicycle.svg" alt="" class="benefits__item-img">
+                        <img src="./img/benefits/bicycle.svg" alt="benefits" class="benefits__item-img">
                         <p class="benefits__item-text">6 км велодорожек</p>
                     </div>
 
@@ -87,7 +91,7 @@
 
         </section>
 
-        <section class="apartments none1">
+        <section class="apartments none1" id="catalog">
             <div class="container">
 
                 <div class="apartments__title">
@@ -132,26 +136,27 @@
                     </div>
 
                     <form action="" class="cta__form form">
-                        <input type="text" class="form__input" placeholder="Ваше имя" autocomplete="off">
-                        <input data-tel-input type="text" class="form__input" placeholder="Ваш телефон" autocomplete="off">
+                        <input type="text" class="form__input" placeholder="Ваше имя" autocomplete="off" id="name">
+                        <input data-tel-input type="text" class="form__input" placeholder="Ваш телефон" autocomplete="off" id="phone">
 
-                        <p class="form__privacy form__privacy--bottom">
+                        <p class="form__privacy form__privacy--bottom" id="secret">
                             *Мы никому не передаем ваши данные. <br>И не сохраняем ваш номер в базу.
                         </p>
 
-                        <button type="submit" class="form__btn">Посмотреть район</button>
+                        <button type="submit" class="form__btn" id="sub-action">Посмотреть район</button>
+                        <p id="successfulSubscribtion"></p>
                     </form>
                 </div>
             </div>
         </section>
 
-        <section class="video none1">
+        <section class="video none1" id="about">
             <h2 class="visually-hidden">Видео про ЖК Loft House</h2>
             <div class="container">
 
                 <a href="https://www.youtube.com/watch?v=bhJNL9JUsnY" data-youtubeLightbox class="video__link">
-                    <img src="./img/video/play.svg" alt="" class="video__icon">
-                    <img src="./img/video/video-img.jpg" alt="" class="video__img">
+                    <img src="./img/video/play.svg" alt="video" class="video__icon">
+                    <img src="./img/video/video-img.jpg" alt="video" class="video__img">
                 </a>
             </div>
         </section>
@@ -167,7 +172,7 @@
             </div>
         </section>
 
-        <section class="feedback none1">
+        <section class="feedback none1" id="questions">
             <div class="container">
                 <div class="feedback__title">
                     <h2 class="title-2">Есть вопросы?</h2>
@@ -178,10 +183,11 @@
                         *Мы никому не передаем ваши данные. <br>И не сохраняем ваш номер в базу.
                     </p>
 
-                    <input type="text" class="form__input" placeholder="Ваше имя" autocomplete="off">
-                    <input data-tel-input type="text" class="form__input" placeholder="Ваш телефон" autocomplete="off">
+                    <input type="text" class="form__input" placeholder="Ваше имя" autocomplete="off" id="Username">
+                    <input data-tel-input type="text" class="form__input" placeholder="Ваш телефон" autocomplete="off" id="Userphone">
 
-                    <button type="submit" class="form__btn">Посмотреть район</button>
+                    <button type="submit" class="form__btn" id="check">Посмотреть район</button>
+                    <p id="Subscribtion"></p>
                 </form>
             </div>
         </section>
@@ -199,11 +205,11 @@
                 <div class="footer__nav">
                     <nav>
                         <ul class="footer__nav-list">
-                            <li><a href="#!">О комплексе</a></li>
-                            <li><a href="#!">Район</a></li>
-                            <li><a href="#!">Каталог квартир</a></li>
-                            <li><a href="#!">Ипотека</a></li>
-                            <li><a href="#!">Контакты</a></li>
+                            <li class="footer-item"><a data-link="about">О комплексе</a></li>
+                            <li class="footer-item"><a data-link="district">Район</a></li>
+                            <li class="footer-item"><a data-link="catalog">Каталог квартир</a></li>
+                            <li class="footer-item"><a data-link="questions">Ипотека</a></li>
+                            <li class="footer-item"><a data-link="contacts">Контакты</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -218,7 +224,7 @@
                         </ul>
                     </nav>
                 </div>
-                <div class="footer__address">
+                <div class="footer__address" id="contacts">
                     <ul class="footer__nav-list">
                         <li>Адрес: Наб. реки Фонтанки 10-15</li>
                         <li>Телефон: <a href="tel:+78121234567">8 (812) 123-45-67</a></li>
@@ -226,17 +232,16 @@
                         <li>E-mail: <a class="link-bold" href="mailto:vip@lofthouse.ru">vip@lofthouse.ru</a></li>
                     </ul>
                     <ul class="footer__socials">
-                        <li><a href="#!"><img src="./img/socials/youtube.svg" alt=""></a></li>
-                        <li><a href="#!"><img src="./img/socials/vk.svg" alt=""></a></li>
-                        <li><a href="#!"><img src="./img/socials/facebook.svg" alt=""></a></li>
-                        <li><a href="#!"><img src="./img/socials/instagram.svg" alt=""></a></li>
+                        <li><a href="#!"><img src="./img/socials/youtube.svg" alt="Oops" title="YouTube"></a></li>
+                        <li><a href="#!"><img src="./img/socials/vk.svg" alt="Oops" title="VK"></a></li>
+                        <li><a href="#!"><img src="./img/socials/facebook.svg" alt="Oops" title="Facebook"></a></li>
+                        <li><a href="#!"><img src="./img/socials/instagram.svg" alt="Oops" title="Instagram"></a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- YouTube LightBox -->
     <div id="youtubelightbox" class="youtubelightbox">
         <div class="youtubelightbox__centeredchild">
             <div class="youtubelightbox__videowrapper">
@@ -245,11 +250,13 @@
         </div>
     </div>
 
+    <script src="./libs/phoneMask/mask.js"></script>
+    <script src="./libs/phoneMask/mask_list.js"></script>
+    <script src="./js/phoneMask.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=4f537583-9ef9-4998-a98b-9a6ee160a9d3&lang=ru_RU" type="text/javascript"></script>
-
     <script src="./libs/youtubeLightbox/youtubeLightbox.js"></script>
-
     <script src="./js/main.js"></script>
+    <script src="./js/map.js"></script>
 
 </body>
 </html>

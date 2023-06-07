@@ -1,5 +1,8 @@
+// ! Селектор для ссылок - на которых нужно вызывать youtubeLightbox
 const linksBtnsSelector = 'a[data-youtubeLightbox]';
+// const linksBtnsSelector = '.lightbox';
 
+// load Youtube API code asynchronously
 var tag = document.createElement('script');
 
 tag.src = 'https://www.youtube.com/iframe_api';
@@ -9,7 +12,9 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 var isiOS = navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)/i) != null; //boolean check for iOS devices
 
 var youtubelightbox = document.getElementById('youtubelightbox');
+var player; // variable to hold new YT.Player() instance
 
+// Hide lightbox when clicked on
 youtubelightbox.addEventListener(
 	'click',
 	function () {
@@ -19,6 +24,7 @@ youtubelightbox.addEventListener(
 	false
 );
 
+// Exclude youtube iframe from above action
 youtubelightbox
 	.querySelector('.youtubelightbox__centeredchild')
 	.addEventListener(
@@ -29,10 +35,12 @@ youtubelightbox
 		false
 	);
 
+// define onYouTubeIframeAPIReady() function and initialize lightbox when API is ready
 function onYouTubeIframeAPIReady() {
 	createlightbox();
 }
 
+// Extracts the Youtube video ID from a well formed Youtube URL
 function getyoutubeid(link) {
 	// Assumed Youtube URL formats
 	// https://www.youtube.com/watch?v=Pe0jFDPHkzo
