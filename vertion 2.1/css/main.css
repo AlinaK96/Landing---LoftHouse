@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/* Reset and base styles  */
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;700&family=Roboto:wght@300&display=swap");
 * {
   padding: 0px;
@@ -224,7 +223,7 @@ a:hover {
 .nav__list {
   display: flex;
   -moz-column-gap: 40px;
-       column-gap: 40px;
+        column-gap: 40px;
 }
 
 .nav-icon-btn {
@@ -333,7 +332,7 @@ a:hover {
 .benefits__row {
   display: flex;
   -moz-column-gap: 70px;
-       column-gap: 70px;
+        column-gap: 70px;
 }
 
 
@@ -684,7 +683,7 @@ a:hover {
   display: flex;
   align-items: center;
   -moz-column-gap: 22px;
-       column-gap: 22px;
+        column-gap: 22px;
 }
 
 .back-to-top {
