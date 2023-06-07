@@ -11,7 +11,7 @@
 * необходимость валидировать инпут для отправки данных 
 * адаптивен под разную ширину экрана (media-queries)
 
-Посмотреть онлайн: https://alinak96.github.io/Landing---LoftHouse/ <br>
+Посмотреть онлайн: https://alinak96.github.io/LoftHouse/? <br>
 <br>
 
 ![Вид:](./img/loftHouseFinal.png)
